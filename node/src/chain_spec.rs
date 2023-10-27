@@ -291,10 +291,15 @@ pub mod devnet {
 				..Default::default()
 			},
 			transaction_payment: Default::default(),
-			babe: Some(BabeConfig { authorities: vec![] }),
-			grandpa: GrandpaConfig {
-				authorities: initial_authorities.iter().map(|x| (x.1.clone(), 1)).collect(),
+			babe: BabeConfig {
+				authorities: vec![],
+				epoch_config: Some(sp_consensus_babe::BabeEpochConfiguration {
+					c: (1, 4),
+					allowed_slots: sp_consensus_babe::AllowedSlots::PrimaryAndSecondaryPlainSlots,
+				}),
+				_config: std::marker::PhantomData,
 			},
+			grandpa: GrandpaConfig { authorities: vec![], _config: std::marker::PhantomData },
 		}
 	}
 }

@@ -224,6 +224,13 @@ pub const UNIT: Balance = 1_000 * MILLIUNIT;
 
 pub const EXISTENTIAL_DEPOSIT: Balance = MILLIUNIT;
 
+// pub const PRIMARY_PROBABILITY: (u64, u64) = (1, 4);
+
+// pub const pub const BABE_GENESIS_EPOCH_CONFIG: sp_consensus_babe::BabeEpochConfiguration = sp_consensus_babe::BabeEpochConfiguration {
+// 	c: PRIMARY_PROBABILITY,
+// 	allowed_slots: sp_consensus_babe::AllowedSlots::PrimaryAndSecondaryPlainSlots,
+// };
+
 pub const fn deposit(items: u32, bytes: u32) -> Balance {
 	(items as Balance * 20 * UNIT + (bytes as Balance) * 100 * MICROUNIT) / 100
 }
