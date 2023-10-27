@@ -618,6 +618,7 @@ impl pallet_grandpa::Config for Runtime {
 	type WeightInfo = ();
 	type MaxAuthorities = ConstU32<32>;
 	type MaxSetIdSessionEntries = ConstU64<0>;
+	type MaxNominators = ConstU32<10>;
 
 	type KeyOwnerProof = sp_core::Void;
 	type EquivocationReportSystem = ();
@@ -630,6 +631,7 @@ impl pallet_babe::Config for Runtime {
 	type DisabledValidators = ();
 	type WeightInfo = ();
 	type MaxAuthorities = ConstU32<20>;
+	type MaxNominators = ConstU32<10>;
 	type KeyOwnerProof = sp_core::Void;
 	type EquivocationReportSystem = ();
 }
