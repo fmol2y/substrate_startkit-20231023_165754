@@ -56,6 +56,7 @@ pallet-preimage = { workspace = true, default-features = false }
 sp-api = { workspace = true, default-features = false }
 sp-block-builder = { workspace = true, default-features = false }
 sp-consensus-aura = { workspace = true, default-features = false }
+sp-consensus-babe = { workspace = true, default-features = false }
 sp-core = { workspace = true, default-features = false }
 sp-inherents = { workspace = true, default-features = false }
 sp-offchain = { workspace = true, default-features = false }
@@ -195,6 +196,8 @@ try-runtime=[
 	"pallet-utility/try-runtime",
 	"pallet-xcm/try-runtime",
 	"parachain-info/try-runtime",
+	"pallet-babe/try-runtime",
+	"pallet-grandpa/try-runtime"
 ]
 
 
